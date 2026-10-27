@@ -1,4 +1,4 @@
-namespace AlgoritmosOrdenacao.Algoritmos;
+namespace AlgoritmosOrdenacao.Algorithms;
 
 // Versão simplificada: insertion sort em "runs" fixos + merge bottom-up.
 public static class TimSort

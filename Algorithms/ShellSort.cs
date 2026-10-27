@@ -1,4 +1,4 @@
-namespace AlgoritmosOrdenacao.Algoritmos;
+namespace AlgoritmosOrdenacao.Algorithms;
 
 public static class ShellSort
 {

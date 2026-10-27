@@ -1,5 +1,5 @@
 using AlgoritmosOrdenacao;
-using AlgoritmosOrdenacao.Algoritmos;
+using AlgoritmosOrdenacao.Algorithms;
 
 // Uso:
 //   dotnet run                -> executa todos os algoritmos

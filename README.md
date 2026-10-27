@@ -1,6 +1,6 @@
 # Sorting Algorithms in C#
 
-22 sorting algorithms, each in its own file (`Algoritmos/`), using a shared external array
+22 sorting algorithms, each in its own file (`Algorithms/`), using a shared external array
 (`Vetores.cs`). When run, each algorithm prints the **original array** and the **sorted array**,
 and the result is checked against `Array.Sort`.
 
