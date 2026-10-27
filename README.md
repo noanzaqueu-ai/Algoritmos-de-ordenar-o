@@ -1,50 +1,33 @@
-Insertion Sort in C#
+# Sorting Algorithms in C#
 
-A small console application that demonstrates the Insertion Sort algorithm in C#, sorting the same array first in descending order and then in ascending order.
+22 sorting algorithms, each in its own file (`Algoritmos/`), using a shared external array
+(`Vetores.cs`). When run, each algorithm prints the **original array** and the **sorted array**,
+and the result is checked against `Array.Sort`.
 
-How it works
+## How to run
 
-Insertion Sort builds the sorted portion of the array one element at a time. For each element (the "key"), it shifts the larger (or smaller) elements of the sorted portion one position to the right and inserts the key in its correct place.
+Requires the [.NET 8 SDK](https://dotnet.microsoft.com/download).
 
-Method	Order	Condition in the while loop
-InsertionSort	Descending (high → low)	arr[j] < chave
-InsertDesc	Ascending (low → high)	arr[j] > chave
+```bash
+dotnet run                    # runs all algorithms
+dotnet run -- QuickSort       # runs a single one (use the class name)
+```
 
-Note: despite its name, InsertDesc sorts in ascending order. Consider renaming it to InsertAsc to avoid confusion.
+## Test array
 
-Program flow
-Creates an array of 50 unsorted integers.
-Prints the original array.
-Sorts it in descending order with InsertionSort and prints the result.
-Sorts it in ascending order with InsertDesc and prints the result.
-Complexity
-Case	Time	Space
-Best	O(n)	O(1)
-Average	O(n²)	O(1)
-Worst	O(n²)	O(1)
+Edit `Vetores.cs` to try other data:
 
-The algorithm sorts in place and is stable.
+```csharp
+public static readonly int[] Principal = { 64, 34, 25, 12, 22, 11, 90, 5, -3, 25, 0, 47 };
+public static readonly int[] Pequeno   = { 5, 2, 4, 1, 3 }; // used only by Bogo Sort
+```
 
-Requirements
-.NET SDK (LTS version recommended)
-Visual Studio Code with the C# Dev Kit extension (optional)
-Running the project
+## Algorithms
 
-From the project folder (the one containing the .csproj file):
+| Category | Algorithms |
+|---|---|
+| Simple comparison | Bubble, Selection, Insertion, Binary Insertion, Shell, Cocktail Shaker, Comb, Gnome, Odd-Even, Cycle, Pancake, Stooge, Bogo |
+| Divide and conquer / data structures | Merge, Quick, Heap, Tim (simplified), Tree (BST) |
+| Non-comparison (integers only) | Counting, Radix (LSD), Bucket, Pigeonhole |
 
-bash
-dotnet run
-Example output
-Vetor Original
-64, 34, 25, 12, 11, 90, 20, 29, 99, 68, ...
-
-Vetor Ordenado (decrescente)
-99, 97, 95, 93, 91, 90, 88, ... 6, 3, 1
-
-Vetor Ordenado (crescente)
-1, 3, 6, 8, 10, 11, 12, ... 95, 97, 99
-Project structure
-InsertionSort_Ordenacao/
-├── Program.cs
-├── InsertionSort_Ordenacao.csproj
-└── README.md
+> Bogo Sort uses the small array: with many elements it would take an impractical amount of time.
